@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Photo Album of Famous Authors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="subContents">
+    <header>
+      <br>
+      <br>
+      <h1 id="title">Photo Album of Famous Authors</h1>
+    </header>
+
+    <nav>
+      <h2 >Menu</h2>
+      <ul id="navi" class="remove">
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#album">PHOTO ALBUM</a></li>
+        <li><a href="#control">CONTROL BUTTONS</a></li>
+      </ul> <br>
+    </nav>  
+
+    <main>
+      <section id="about" class="remove">
+        <h2 >About us</h2>
+        <p>This site introduces people who have published books in the field of <em>Computer Science</em>.</p><br>
+      </section>
+
+      <section id="album">
+        <h2>Photo Album</h2>
+
+        <div id="searchField">
+          <h3>Search photo</h3>
+          <input type="text" id="searchInput" placeholder="Search by author or tag">
+        </div>
+
+        <div id="authorList">
+          <h3>Author List</h3>
+          <p>Filter by author's name</p>
+          <button id="showAll">Show all</button>
+          <div id="authorListContainer"></div><br>
+        </div>
+
+    </div>
+
+        <div id="photo">
+          <h3>Photo</h3>
+          <div id="clickedAuthorNameField"></div>
+          <div id="dataContainer"></div>
+        </div>
+
+      </section>
+
+      <section id="control">
+        <div id="addAuthor">
+          <!-- Trigger/Open The Modal -->
+          <button id="myBtn">Add an Author</button>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+      
+              <form id="dataForm">
+                <h3>Add an Author to the Gallery</h3><br>
+                <p><strong>All fields are required.</strong></p><br>
+                <label for="author">Author's Name:</label><br>
+                <input type="text" id="author" name="author" placeholder="Input an author's name"><br>
+                <label for="alt">Alternative Text for Image:</label><br>
+                <input type="text" id="alt" name="alt" placeholder="Input a short description"><br>
+                <label for="tags">Tags:</label><br>
+                <input type="text" id="tags" name="tags" placeholder="Input tags with commas"><br>
+                <label for="image">Image URL:</label><br>
+                <input type="text" id="image" name="image" placeholder="Input an image URL"><br>
+                <label for="description">Description:</label><br>
+                <input type="text" id="description" name="description" placeholder="Input an author description"><br>
+                <input type="submit" value="Submit">
+                <input type="button" id="cancelBtn" value="Cancel">
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <div id="reset">
+          <button id="resetButton">Reset Album</button>
+        </div>
+        <div id="update">
+          <button id="updateButton">Update Album</button>
+        </div>
+        <br>
+      </section>
+    </main>
+
+    <footer class="subContents">
+      <br>
+      <ul>
+        <li>Author: Lab 205 (Ana Grbic and Yukiko Ikejiri)</li>
+        <li>Date modified: 30/01/2023</li>
+      </ul>
+      <br>
+    </footer>
+  </body>
+
+</html>
